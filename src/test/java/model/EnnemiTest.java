@@ -10,11 +10,14 @@ import junit.framework.TestCase;
 
 
 public class EnnemiTest {
-	Ennemi e = new Ennemi();
 	
-	@Test (expected = NullPointerPosition.class)
-	public void NullPointerException() throws IllegalPositionMatch, NullPointerPosition, IllegalValuePosition {  
-		ArrayList<Position> testPos = null;
+	@Test (expected = IllegalPositionMatch.class)
+	public void testExceptionIsThrown() throws IllegalPositionMatch, NullPointerPosition, IllegalValuePosition {  
+		Ennemi e = new Ennemi();
+		e.setLongeurEnnemi(1);
+		ArrayList<Position> testPos = new ArrayList<Position>();
+		testPos.add(new Position(1));
+		testPos.add(new Position(2));
 		e.setPosition(testPos);
 	} 
 }
