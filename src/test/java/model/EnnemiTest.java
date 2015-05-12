@@ -1,13 +1,14 @@
 package model;
 import java.util.ArrayList;
 
-import org.junit.Test;
-
 import netBattleException.IllegalPositionMatch;
 import netBattleException.IllegalValuePosition;
 import netBattleException.NullPointerPosition;
-import junit.framework.TestCase;
 
+import org.easymock.EasyMock;
+import org.junit.Test;
+
+import static org.easymock.EasyMock.createNiceMock;
 
 public class EnnemiTest {
 	
@@ -19,5 +20,18 @@ public class EnnemiTest {
 		testPos.add(new Position(1));
 		testPos.add(new Position(2));
 		e.setPosition(testPos);
-	} 
+	}
+	
+	@Test
+	public void testCheckGuess() {
+		IPosition getCoordonnMethod = createNiceMock(IPosition.class);
+		ArrayList<Integer> pos = new ArrayList();
+		pos.add(1);
+		EasyMock.expect(getCoordonnMethod.getListCoordonnée()).andReturn(pos);
+		Ennemi e = new Ennemi();
+		e.setLongeurEnnemi(1);
+		e.addPosition(getCoordonnMethod);
+		e.checkGuess(getCoordonnMethod.getListCoordonnée());
+	}
+
 }

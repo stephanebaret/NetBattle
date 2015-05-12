@@ -6,27 +6,27 @@ import netBattleException.IllegalPositionMatch;
 import netBattleException.IllegalValuePosition;
 import netBattleException.NullPointerPosition;
 
-public class Ennemi {
+public class Ennemi implements IEnnemi {
 
 	private int longeurEnnemi;
-	private ArrayList<Position> position;
+	private ArrayList<IPosition> position;
 	private int hit;
 	
 	public Ennemi() {
 		super();
-		position = new ArrayList<Position>();
+		position = new ArrayList<IPosition>();
 		longeurEnnemi = 0;
 		hit = 0;
 	}
 		
 	public Ennemi(int longeurEnnemi) {
 		super();
-		position = new ArrayList<Position>();
+		position = new ArrayList<IPosition>();
 		this.longeurEnnemi = longeurEnnemi;
 		this.hit = 0;
 	}
 	
-	public ArrayList<Position> getPosition() {
+	public ArrayList<IPosition> getPosition() {
 		return position;
 	}
 
@@ -46,7 +46,7 @@ public class Ennemi {
 		this.hit = hit;
 	}
 
-	public void addPosition(Position pos) {
+	public void addPosition(IPosition pos) {
 		this.position.add(pos);
 	}
 	
@@ -72,7 +72,7 @@ public class Ennemi {
 	public Tire checkGuess(Position pos) {
 		//if ((pos < 0) || (pos > 7)) throw new IndexOutOfBoundsException();
 		for(int i = 0;i < position.size();i++) {
-			for (Position p : position) {
+			for (IPosition p : position) {
 				if (p.equals(pos)) {
 					hit++;
 					if (hit == longeurEnnemi)

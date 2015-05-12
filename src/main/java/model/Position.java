@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import netBattleException.OutOfBoundsCoordinate;
 
-public class Position {
+public class Position implements IPosition {
 	private ArrayList<Integer> coordonate = new ArrayList<Integer>();
 
 	public Position() {
