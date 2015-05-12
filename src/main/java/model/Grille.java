@@ -2,20 +2,6 @@ package model;
 
 import netBattleException.IllegalGridDimension;
 
-/**
- * <b>Grille - définit un plateau de jeux en 1 ou 2 dimensions.</b>
- * <p>
- * <ul>
- * <li>tGrille : définit le type de grille en 1 ou 2 dimensions</li>
- * <li>longueurX : longueur de l'axe des x </li>
- * <li>longueurY : longueur de l'axe des y (mis a -1 si la grille est en 1 dimmension)</li>
- * <li>longueurZ : longueur de l'axe des z (mis a -1 si la grille est en 2 dimmension)</li>
- * </ul>
- * </p>
- * @author BARET Stéphane
- *
- */
-
 public class Grille {
 	private TypeGrille tGrille;
 	private int longueurX;

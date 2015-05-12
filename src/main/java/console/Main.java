@@ -10,11 +10,6 @@ import netBattleException.IllegalPositionMatch;
 import netBattleException.IllegalValuePosition;
 import netBattleException.NullPointerPosition;
 
-/**
- * Point d'entrer pour le jeux Net Battle en version Console
- * @author BARET Stéphane
- *
- */
 public class Main {
 	// Scanner pour les entrées clavier
 	static Scanner clavier;
@@ -25,7 +20,7 @@ public class Main {
 		try {
 			netBattle.start();
 			netBattle.play();
-		} catch (IllegalGridDimension | IndexOutOfBoundsException | IllegalCaracterException | IllegalPositionMatch | NullPointerPosition | IllegalValuePosition | IOException e) {
+		} catch (IndexOutOfBoundsException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

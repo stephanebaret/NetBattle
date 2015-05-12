@@ -3,11 +3,6 @@ package model;
 import netBattleException.IllegalGridDimension;
 import netBattleException.OutOfBoundsCoordinate;
 
-/**
- * Classe de Test de la classe Position
- * @author BARET Stéphane
- *
- */
 public class PositionTestDrive {
 
 	public static void main(String[] args) throws IllegalGridDimension, OutOfBoundsCoordinate {

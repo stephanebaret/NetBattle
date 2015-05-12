@@ -27,11 +27,6 @@ public class NetBattle {
 	String filename;
 	File p;
 	
-	/**
-	 * <b>Initialisation de tous les composant du jeux</b>
-	 * 
-	 */
-	
 	public void NetBattle() {
 		joueur = new Joueur();
 	}

@@ -13,8 +13,7 @@ public class netBattleTestDrive {
 		NetBattle n = new NetBattle();
 		try {
 			n.start();
-		} catch (IllegalGridDimension | IllegalPositionMatch
-				| NullPointerPosition | IllegalValuePosition | IOException e) {
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

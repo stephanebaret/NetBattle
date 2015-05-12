@@ -4,16 +4,6 @@ import java.util.ArrayList;
 
 import netBattleException.OutOfBoundsCoordinate;
 
-/**
- * <b>Classe définissant les coordonate d'une Position</b>
- * <p>
- * <ul>
- * <li>private ArrayList<Integer> coordonnée : coordonate de la position</li>
- * </ul>
- * </p>
- * @author BARET Stéphane
- */
-
 public class Position {
 	private ArrayList<Integer> coordonate = new ArrayList<Integer>();
 
@@ -36,14 +26,6 @@ public class Position {
 		coordonate.add(z);
 	}
 
-	/**
-	 * <b>Méthode pour modifier les coordonate d'une Position</b>
-	 * <p>
-	 * <ul>
-	 * <li>Elle reçoit une coordonnée x.</li>
-	 * </ul>
-	 * </p>
-	 */
 	public void addcoordonate(int x) throws OutOfBoundsCoordinate {
 		if (this.coordonate.size() > 0)
 			throw new OutOfBoundsCoordinate();
@@ -51,14 +33,6 @@ public class Position {
 			coordonate.add(x);
 	}
 
-	/**
-	 * <b>Méthode pour modifier les coordonate d'une Position</b>
-	 * <p>
-	 * <ul>
-	 * <li>Elle reçoit des coordonnée x et y.</li>
-	 * </ul>
-	 * </p>
-	 */
 	public void addcoordonate(int x, int y) throws OutOfBoundsCoordinate {
 		if (this.coordonate.size() > 1)
 			throw new OutOfBoundsCoordinate();
@@ -68,14 +42,6 @@ public class Position {
 		}
 	}
 
-	/**
-	 * <b>Méthode pour modifier les coordonate d'une Position</b>
-	 * <p>
-	 * <ul>
-	 * <li>Elle reçoit une coordonnée x,y et z.</li>
-	 * </ul>
-	 * </p>
-	 */
 	public void addcoordonate(int x, int y, int z)
 			throws OutOfBoundsCoordinate {
 		if (this.coordonate.size() > 2)

@@ -6,17 +6,6 @@ import netBattleException.IllegalPositionMatch;
 import netBattleException.IllegalValuePosition;
 import netBattleException.NullPointerPosition;
 
-/**
- * <b>Classe définissant la position et le type d'ennemis</b>
- * <p>
- * <ul>
- * <li>int LONGUEUR_ENEMY : longueur de l'ennemi, constante</li>
- * <li>Position position : liste des positions d'un ennemi</li>
- * <li>int hit : compteur d'une nombre de fois qu'un ennemi est touché</li>
- * </ul>
- * </p>
- * @author BARET Stéphane
- */
 public class Ennemi {
 
 	private int longeurEnnemi;
@@ -61,14 +50,6 @@ public class Ennemi {
 		this.position.add(pos);
 	}
 	
-	/**
-	 * <b>Méthode pour modifier les positions d'un ennemi</b>
-	 * <p>
-	 * <ul>
-	 * <li>Elle reçoit une liste de position entier en paramètre et remplace celle existantes.</li>
-	 * </ul>
-	 * </p>
-	 */
 	public void setPosition(ArrayList<Position> pos) throws IllegalPositionMatch, NullPointerPosition, IllegalValuePosition {
 		try {
 			if (position.size() != pos.size()) throw new IllegalPositionMatch();
@@ -88,14 +69,6 @@ public class Ennemi {
 		}
 	}
 	
-	/**
-	 * <b>Méthode qui vérifie si la position passer en parametre touche un ennemi</b>
-	 * <p>
-	 * <ul>
-	 * <li>Test la position ou le joueur vise et renvoie le résultat</li>
-	 * </ul>
-	 * </p>
-	 */
 	public Tire checkGuess(Position pos) {
 		//if ((pos < 0) || (pos > 7)) throw new IndexOutOfBoundsException();
 		for(int i = 0;i < position.size();i++) {
