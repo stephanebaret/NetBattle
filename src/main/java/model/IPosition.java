@@ -12,7 +12,9 @@ public interface IPosition {
 
 	public void addcoordonate(int x, int y, int z) throws OutOfBoundsCoordinate;
 
-	public ArrayList<Integer> getCoordonnée();
+	public int getCoordonate(int index);
+	
+	public ArrayList<Integer> getCoordonate();
 
-	public ArrayList<Integer> getListCoordonnée();
+	public ArrayList<Integer> getListCoordonate();
 }

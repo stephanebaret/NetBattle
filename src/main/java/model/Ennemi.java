@@ -50,18 +50,18 @@ public class Ennemi implements IEnnemi {
 		this.position.add(pos);
 	}
 	
-	public void setPosition(ArrayList<Position> pos) throws IllegalPositionMatch, NullPointerPosition, IllegalValuePosition {
+	public void setPosition(ArrayList<IPosition> pos) throws IllegalPositionMatch, NullPointerPosition, IllegalValuePosition {
 		try {
 			if (position.size() != pos.size()) throw new IllegalPositionMatch();
-			for(Position p : pos) {
+			for(IPosition p : pos) {
 				if (p == null) throw new NullPointerException();
 			}
-			for(Position p : pos) {
-				for(int value : p.getCoordonnée())
+			for(IPosition p : pos) {
+				for(int value : p.getCoordonate())
 					if (value < 0) throw new IllegalValuePosition();
 			}
 			position.clear();
-			for (Position p : pos)
+			for (IPosition p : pos)
 				position.add(p);
 		} catch (NullPointerException e) {
 			e.printStackTrace();
@@ -69,7 +69,7 @@ public class Ennemi implements IEnnemi {
 		}
 	}
 	
-	public Tire checkGuess(Position pos) {
+	public Tire checkGuess(IPosition pos) {
 		//if ((pos < 0) || (pos > 7)) throw new IndexOutOfBoundsException();
 		for(int i = 0;i < position.size();i++) {
 			for (IPosition p : position) {
@@ -93,13 +93,13 @@ public class Ennemi implements IEnnemi {
 			Ennemi e = (Ennemi) obj;
 			if (position.size() == e.getPosition().size()) {
 				for (int i = 0;i < position.size();i++) {
-					if (position.get(i).getCoordonnée().size() != 
-							e.getPosition().get(i).getCoordonnée().size()) return false; 
+					if (position.get(i).getCoordonate().size() != 
+							e.getPosition().get(i).getCoordonate().size()) return false; 
 				}
 				for (int i = 0;i < position.size();i++) {
-					for (int j = 0;j < position.get(i).getListCoordonnée().size();j++)
-						if (position.get(i).getCoordonnée(j) 
-								!= e.getPosition().get(i).getCoordonnée(j)) return false;
+					for (int j = 0;j < position.get(i).getListCoordonate().size();j++)
+						if (position.get(i).getCoordonate(j) 
+								!= e.getPosition().get(i).getCoordonate(j)) return false;
 				}
 				return true;
 			}

@@ -53,23 +53,23 @@ public class Position implements IPosition {
 		}
 	}
 
-	public ArrayList<Integer> getCoordonnée() {
+	public ArrayList<Integer> getCoordonate() {
 		return coordonate;
 	}
 
-	public void setCoordonnée(ArrayList<Integer> coordonate) {
+	public void setCoordonate(ArrayList<Integer> coordonate) {
 		this.coordonate = coordonate;
 	}
 
-	public void setCoordonnée(int index, int value) {
+	public void setCoordonate(int index, int value) {
 		this.coordonate.set(index, value);
 	}
 
-	public int getCoordonnée(int index) {
+	public int getCoordonate(int index) {
 		return this.coordonate.get(index);
 	}
 
-	public ArrayList<Integer> getListCoordonnée() {
+	public ArrayList<Integer> getListCoordonate() {
 		return this.coordonate;
 	}
 

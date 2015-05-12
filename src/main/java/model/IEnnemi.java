@@ -1,6 +1,16 @@
 package model;
 
+import java.util.ArrayList;
+
+import netBattleException.IllegalPositionMatch;
+import netBattleException.IllegalValuePosition;
+import netBattleException.NullPointerPosition;
+
 public interface IEnnemi {
-	public Tire checkGuess(Position pos);
+	public void addPosition(IPosition pos);
+	
+	public void setPosition(ArrayList<IPosition> pos) throws IllegalPositionMatch, NullPointerPosition, IllegalValuePosition;
+	
+	public Tire checkGuess(IPosition pos);
 	
 }

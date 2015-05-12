@@ -19,7 +19,7 @@ public class PositionTestDrive {
 			//e.printStackTrace();
 		}
 		
-		pTest.getCoordonnée().clear();
+		pTest.getCoordonate().clear();
 		
 		j.setPlateau(new Grille(TypeGrille._2D,10,10));
 		try {
@@ -31,7 +31,7 @@ public class PositionTestDrive {
 			//e.printStackTrace();
 		}
 		
-		pTest.getCoordonnée().clear();
+		pTest.getCoordonate().clear();
 		
 		j.setPlateau(new Grille(TypeGrille._3D,10,10,10));
 		try {
@@ -59,24 +59,24 @@ public class PositionTestDrive {
 		else
 			System.out.println("nok");
 		
-		pTest.getCoordonnée().clear();
-		pTest2.getCoordonnée().clear();
+		pTest.getCoordonate().clear();
+		pTest2.getCoordonate().clear();
 		pTest.addcoordonate(0, 2);
 		pTest2.addcoordonate(0, 2);
 		if (pTest2.equals(pTest)) System.out.println("ok");
 		else
 			System.out.println("nok");
 		
-		pTest.getCoordonnée().clear();
-		pTest2.getCoordonnée().clear();
+		pTest.getCoordonate().clear();
+		pTest2.getCoordonate().clear();
 		pTest.addcoordonate(0, 2, 4);
 		pTest2.addcoordonate(0, 2, 4);
 		if (pTest2.equals(pTest)) System.out.println("ok");
 		else
 			System.out.println("nok");
 		
-		pTest.getCoordonnée().clear();
-		pTest2.getCoordonnée().clear();
+		pTest.getCoordonate().clear();
+		pTest2.getCoordonate().clear();
 		pTest.addcoordonate(0, 2);
 		pTest2.addcoordonate(0, 2, 4);
 		if (!pTest2.equals(pTest)) System.out.println("ok");
