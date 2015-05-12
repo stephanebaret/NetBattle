@@ -20,17 +20,6 @@ import netBattleException.IllegalPositionMatch;
 import netBattleException.IllegalValuePosition;
 import netBattleException.NullPointerPosition;
 
-/**
- * <b>NetBattle est le controlleur du jeux en en mode console</b>
- * 
- * <ul>
- * <li>Initilisation des enemies, du plateau, du joueur, du score</li>
- * <ul>
- * 
- * @author BARET Stéphane 
- * 
- */
-
 public class NetBattle {
 	Joueur joueur;
 	Properties propLastLogin;
@@ -76,13 +65,6 @@ public class NetBattle {
 //		System.out.println("ennemi "+j.getEnemi().getPosition().toString());
 	}
 	
-	/**
-	 * <b>Démarre la partie et l'interaction en mode console</b>
-	 * 
-	 * <ul>
-	 * <li>s  </li>
-	 * </ul>
-	 */
 	public void play() {
 //		String s;
 //		
@@ -100,12 +82,6 @@ public class NetBattle {
 //		propLastLogin.store(fos,"test");
 	}
 	
-	/**
-	 * <b>Méthode qui lit le clavier pour recevoir une postion de tir</b>
-	 * <ul>
-	 * <li>Saisie au clavier une position de tir et renvoi une position correct ou boucle sur la sasie.</li>
-	 * </ul>
-	 */
 	private int getGuess(Joueur j) {
 //		do
 //		{
