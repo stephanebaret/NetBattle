@@ -12,7 +12,6 @@ import netBattleException.IllegalGridDimension;
  * <li>longueurZ : longueur de l'axe des z (mis a -1 si la grille est en 2 dimmension)</li>
  * </ul>
  * </p>
- * @see {@link TypeGrille}
  * @author BARET Stéphane
  *
  */

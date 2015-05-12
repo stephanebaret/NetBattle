@@ -11,7 +11,6 @@ import netBattleException.OutOfBoundsCoordinate;
  * <li>private ArrayList<Integer> coordonnée : coordonate de la position</li>
  * </ul>
  * </p>
- * 
  * @author BARET Stéphane
  */
 
@@ -44,11 +43,6 @@ public class Position {
 	 * <li>Elle reçoit une coordonnée x.</li>
 	 * </ul>
 	 * </p>
-	 * 
-	 * @param x
-	 *            : coordonnée x de Position
-	 * @throws OutOfBoundsCoordinate
-	 *             : génère cette exception si trop de dimension sont saisies
 	 */
 	public void addcoordonate(int x) throws OutOfBoundsCoordinate {
 		if (this.coordonate.size() > 0)
@@ -64,13 +58,6 @@ public class Position {
 	 * <li>Elle reçoit des coordonnée x et y.</li>
 	 * </ul>
 	 * </p>
-	 * 
-	 * @param x
-	 *            : coordonnée x de Position
-	 * @param y
-	 *            : coordonnée y de Position
-	 * @throws OutOfBoundsCoordinate
-	 *             : génère cette exception si trop de dimension sont saisies
 	 */
 	public void addcoordonate(int x, int y) throws OutOfBoundsCoordinate {
 		if (this.coordonate.size() > 1)
@@ -88,15 +75,6 @@ public class Position {
 	 * <li>Elle reçoit une coordonnée x,y et z.</li>
 	 * </ul>
 	 * </p>
-	 * 
-	 * @param x
-	 *            : coordonnée x de Position
-	 * @param y
-	 *            : coordonnée y de Position
-	 * @param z
-	 *            : coordonnée z de Position
-	 * @throws OutOfBoundsCoordinate
-	 *             : génère cette exception si trop de dimension sont saisies
 	 */
 	public void addcoordonate(int x, int y, int z)
 			throws OutOfBoundsCoordinate {

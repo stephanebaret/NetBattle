@@ -16,7 +16,6 @@ import netBattleException.NullPointerPosition;
  * </ul>
  * </p>
  * @author BARET Stéphane
- * @see {@link model.Position}
  */
 public class Ennemi {
 
@@ -69,10 +68,6 @@ public class Ennemi {
 	 * <li>Elle reçoit une liste de position entier en paramètre et remplace celle existantes.</li>
 	 * </ul>
 	 * </p>
-	 * @param pos : List des positions d'un ennemi
-	 * @throws IllegalPositionMatch : si le nombre de positions reçu en parametre sont différentes de celle de l'ennemi
-	 * @throws NullPointerPosition : si la liste des positions pointent sur null
-	 * @throws IllegalValuePosition : si une des valeurs de la liste est inferieur à 0
 	 */
 	public void setPosition(ArrayList<Position> pos) throws IllegalPositionMatch, NullPointerPosition, IllegalValuePosition {
 		try {
@@ -99,10 +94,7 @@ public class Ennemi {
 	 * <ul>
 	 * <li>Test la position ou le joueur vise et renvoie le résultat</li>
 	 * </ul>
-	 * @see {@link Tire}
 	 * </p>
-	 * @param pos : position ou le joueur vise
-	 * @return Tire : une énumération qui renvoie le résultat du tire
 	 */
 	public Tire checkGuess(Position pos) {
 		//if ((pos < 0) || (pos > 7)) throw new IndexOutOfBoundsException();

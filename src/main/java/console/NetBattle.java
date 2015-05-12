@@ -41,18 +41,13 @@ public class NetBattle {
 	/**
 	 * <b>Initialisation de tous les composant du jeux</b>
 	 * 
-	 * @throws IllegalGridDimension : envoi cette eception si la grille a des dimensions non implémenté
-	 * @throws IllegalValuePosition 
-	 * @throws NullPointerPosition 
-	 * @throws IllegalPositionMatch 
-	 * @throws IOException 
 	 */
 	
 	public void NetBattle() {
 		joueur = new Joueur();
 	}
 	
-	public void start() throws IllegalGridDimension, IllegalPositionMatch, NullPointerPosition, IllegalValuePosition, IOException {		
+	public void start() throws IOException  {		
 		filename = System.getProperties().getProperty("user.dir")+LASTPLAYER;
 		p = new File(filename);
 		propLastLogin = new Properties();
@@ -87,11 +82,8 @@ public class NetBattle {
 	 * <ul>
 	 * <li>s  </li>
 	 * </ul>
-	 * @throws IndexOutOfBoundsException
-	 * @throws IllegalCaracterException
-	 * @throws IOException 
 	 */
-	public void play() throws IndexOutOfBoundsException, IllegalCaracterException, IOException {
+	public void play() {
 //		String s;
 //		
 //		System.out.println("Bienvenue dans NetBattle :");
@@ -113,11 +105,8 @@ public class NetBattle {
 	 * <ul>
 	 * <li>Saisie au clavier une position de tir et renvoi une position correct ou boucle sur la sasie.</li>
 	 * </ul>
-	 * @param j
-	 * @return renvoi un entier avec une position valide de tir
-	 * @throws IllegalCaracterException : exception génerer si appuie d'une touche non accepter.
 	 */
-	private int getGuess(Joueur j) throws IllegalCaracterException {
+	private int getGuess(Joueur j) {
 //		do
 //		{
 //			System.out.print("Veuillez entrez un nombre comrpis entre 0 et 6 : ");
